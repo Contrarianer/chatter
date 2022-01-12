@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:16.3.0-alpine
 WORKDIR /usr/src/app
 COPY . .
 RUN npm set registry https://registry.npmmirror.com \
