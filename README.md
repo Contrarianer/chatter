@@ -1,6 +1,6 @@
 ## chatter
 
-a simple web example 
+A simple web example 
 
 ## requirement
 
