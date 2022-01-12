@@ -1,0 +1,55 @@
+{
+    "categories": {
+        "test": {
+            "appenders": [
+                "cheese",
+                "console"
+            ],
+            "level": "info"
+        },
+        "dev": {
+            "appenders": [
+                "cheese",
+                "console"
+            ],
+            "level": "trace"
+        },
+        "dateFile": {
+            "appenders": [
+                "cheese",
+                "console",
+                "dateFile"
+            ],
+            "level": "trace"
+        },
+        "default": {
+            "appenders": [
+                "cheese",
+                "console"
+            ],
+            "level": "info"
+        }
+    },
+    "appenders": {
+        "cheese": {
+            "type": "file",
+            "filename": "Logs/cheese.log",
+            "maxLogSize": 10485760,
+            "numBackups": 5,
+            "encoding": "utf-8",
+            "layout": {
+                "type": "pattern",
+                "pattern": "[%d]-[%p] %m"
+            }
+        },
+        "console": {
+            "type": "console"
+        },
+        "dateFile": {
+            "type": "dateFile",
+            "filename": "Logs/date_file.log",
+            "pattern": "yyyy-MM-dd-hh-mm-ss",
+            "compress": true
+        }
+    }
+}

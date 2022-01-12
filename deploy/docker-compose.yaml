@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  chatter:
+    restart: always
+    deploy:
+      replicas: 5
+    image: ""
+    container_name: chatter
+    ports:
+      - "3333:3333"
