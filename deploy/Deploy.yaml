@@ -1,35 +1,1 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: chatter
-  labels:
-    app: chatter
-spec:
-  replicas: 5
-  template:
-    metadata:
-      name: chatter
-      labels:
-        app: chatter
-    spec:
-      containers:
-        - name: chatter
-          image: ""
-          imagePullPolicy: Always
-      restartPolicy: Always
-  selector:
-    matchLabels:
-      app: chatter
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: chatter
-spec:
-  selector:
-    app: chatter
-  type: NodePort
-  ports:
-    - name: "chatter_service"
-      port: 3333
-      nodePort: 30333
+apiVersion: apps/v1kind: Deploymentmetadata:  name: chatter  labels:    app: chatterspec:  replicas: 5  template:    metadata:      name: chatter      labels:        app: chatter    spec:      containers:        - name: chatter          image: ""          imagePullPolicy: Always      restartPolicy: Always  selector:    matchLabels:      app: chatter---apiVersion: v1kind: Servicemetadata:  name: chatterspec:  selector:    app: chatter  type: NodePort  ports:    - name: "chatter_service"      port: 3333      nodePort: 30333
