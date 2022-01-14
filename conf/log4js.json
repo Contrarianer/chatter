@@ -5,14 +5,16 @@
                 "cheese",
                 "console"
             ],
-            "level": "info"
+            "level": "all",
+            "enableCallStack": true
         },
         "dev": {
             "appenders": [
                 "cheese",
                 "console"
             ],
-            "level": "trace"
+            "level": "trace",
+            "enableCallStack": true
         },
         "dateFile": {
             "appenders": [
@@ -20,14 +22,16 @@
                 "console",
                 "dateFile"
             ],
-            "level": "trace"
+            "level": "trace",
+            "enableCallStack": true
         },
         "default": {
             "appenders": [
                 "cheese",
                 "console"
             ],
-            "level": "info"
+            "level": "info",
+            "enableCallStack": true
         }
     },
     "appenders": {
