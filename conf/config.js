@@ -3,9 +3,9 @@ const log4js = require('log4js');
 
 // load config
 log4js.configure("./conf/log4js.json")
-const logger = log4js.getLogger("test");
+const logger = log4js.getLogger("dev");
 
-var pool = mysql.createPool({
+let pool = mysql.createPool({
     host: "127.0.0.1",
     port: 3306,
     user: "root",
@@ -14,7 +14,7 @@ var pool = mysql.createPool({
 })
 
 
-var query = function (sql, options, callback) {
+let query = function (sql, options, callback) {
     pool.getConnection(function (err, conn) {
         if (err) {
             callback(err, null);
