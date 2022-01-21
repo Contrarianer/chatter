@@ -3,7 +3,7 @@ const log4js = require('log4js');
 
 // load config
 log4js.configure("./conf/log4js.json")
-const logger = log4js.getLogger("dev");
+const logger = log4js.getLogger("test");
 
 let pool = mysql.createPool({
     host: "127.0.0.1",

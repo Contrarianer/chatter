@@ -58,7 +58,7 @@
     },
     "error": {
       "type": "dateFile",
-      "filename": "log/ua_error.log",
+      "filename": "Logs/ua_error.log",
       "pattern": ".yyyy-MM-dd",
       "layout": {
         "type": "pattern",
