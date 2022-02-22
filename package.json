@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "main": "node app.js"
+  },
   "devDependencies": {
     "async": "^3.2.3",
     "body-parser": "^1.19.1",
